@@ -4,7 +4,7 @@ version: '3.2'
 # Containers we are going to run
 services:
   # Our Phoenix container
-  phoenix:
+  app:
     # The build parameters for this container.
     build:
       # Here we define that it should build from the current directory

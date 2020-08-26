@@ -10,5 +10,8 @@ RUN apt-get install --yes build-essential inotify-tools postgresql-client curl
 RUN mix local.hex --force
 RUN mix local.rebar --force
 
+RUN mkdir /app
+COPY . /app
 WORKDIR /app
-EXPOSE 4000
+
+CMD ["/app/entrypoint.sh"]
